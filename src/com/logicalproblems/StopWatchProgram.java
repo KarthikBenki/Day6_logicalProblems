@@ -12,34 +12,28 @@ d. O/P -> Print the elapsed time.
  */
 
 public class StopWatchProgram {
+	public static double startWatch() {
+		System.out.println("Enter 1 to start watch");
+		Scanner scanner = new Scanner(System.in);
+		double startWatch = scanner.nextDouble();
+		startWatch = System.currentTimeMillis();
+		return startWatch;
 
-	public static void stopWatch(int click) {
-		final int START = 1;
-		final int STOP = 0;
-		int i = 0;
+	}
 
-		if (click == START) {
-			while (true) {
-				System.out.println(i++);
-				if (i > 9999) {
-					break;
-				}
-			}
-
-		}
-		System.out.println(i / 60 + " minutes");
+	public static double stopWatch() {
+		System.out.println("Enter 0 to stop watch");
+		Scanner scanner = new Scanner(System.in);
+		double stopWatch = scanner.nextDouble();
+		stopWatch = System.currentTimeMillis();
+		return stopWatch;
 
 	}
 
 	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
-		while (true) {
-			System.out.println("Enter 1 to start 0 to stop");
-			int num = scanner.nextInt();
-			stopWatch(num);
+		double timeInSec = Math.abs((startWatch() - stopWatch())) / 1000;
+		System.out.println("time in sec is " + timeInSec);
 
-		}
-//		scanner.close();
 	}
 
 }
