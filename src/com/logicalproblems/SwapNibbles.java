@@ -18,15 +18,16 @@ public class SwapNibbles {
     }
 
     public static void main(String[] args) {
-	Scanner scanner = new Scanner(System.in);
-	System.out.println("Enter the number");
-	int num = scanner.nextInt();
-	int num2 = swapNibbles(num);
-	int ret = PowerOfTwo.powerOfTwo(num2);
-	if (ret == 1) {
-	    System.out.println("swapped number power of 2");
-	} else {
-	    System.out.println("swapped number is not a power of 2");
+	try (Scanner scanner = new Scanner(System.in)) {
+	    System.out.println("Enter the number");
+	    int num = scanner.nextInt();
+	    int num2 = swapNibbles(num);
+	    int ret = PowerOfTwo.powerOfTwo(num2);
+	    if (ret == 1) {
+		System.out.println("swapped number power of 2");
+	    } else {
+		System.out.println("swapped number is not a power of 2");
+	    }
 	}
 
     }
