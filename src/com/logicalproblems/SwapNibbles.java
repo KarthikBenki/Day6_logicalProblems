@@ -26,7 +26,7 @@ public class SwapNibbles {
 	    if (ret == 1) {
 		System.out.println("swapped number power of 2");
 	    } else {
-		System.out.println("swapped number is not a power of 2");
+		System.out.println(" swapped number is not a power of 2");
 	    }
 	}
 
